@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { LoansComponent } from './loans/loans.component';
+import { LoanTypesComponent } from './loan-types/loan-types.component';
+import { AddLoansComponent } from './add-loans/add-loans.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplatedrivenformComponent
+    TemplatedrivenformComponent,
+    LoansComponent,
+    LoanTypesComponent,
+    AddLoansComponent
   ],
   imports: [
     BrowserModule,
