@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row text-center align-middle">
+        <h2>Template Driven Forms</h2>
+        <div class="col-md-12"> 
+            <form>
+                <input type="text" [(ngModel)]="Firstname" name="Firstname">
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    {{Firstname | uppercase }}
+</div>
