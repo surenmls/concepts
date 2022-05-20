@@ -9,6 +9,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { AddLoansComponent } from './add-loans/add-loans.component';
+import { FilterdataPipe } from './filterdata.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddLoansComponent } from './add-loans/add-loans.component';
     TemplatedrivenformComponent,
     LoansComponent,
     LoanTypesComponent,
-    AddLoansComponent
+    AddLoansComponent,
+    FilterdataPipe
   ],
   imports: [
     BrowserModule,
