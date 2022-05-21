@@ -10,6 +10,10 @@ import { LoansComponent } from './loans/loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { AddLoansComponent } from './add-loans/add-loans.component';
 import { FilterdataPipe } from './filterdata.pipe';
+import { AdminComponent } from './admin/admin.component';
+import { AdminEditComponent } from './admin-edit/admin-edit.component';
+import { AdminDeleteComponent } from './admin-delete/admin-delete.component';
+import { AdminManageComponent } from './admin-manage/admin-manage.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { FilterdataPipe } from './filterdata.pipe';
     LoansComponent,
     LoanTypesComponent,
     AddLoansComponent,
-    FilterdataPipe
+    FilterdataPipe,
+    AdminComponent,
+    //AdminEditComponent,
+    //AdminDeleteComponent,
+    //AdminManageComponent
   ],
   imports: [
     BrowserModule,
