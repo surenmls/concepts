@@ -9,6 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthGuard } from './auth.guard';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { LoansComponent } from './loans/loans.component';
+import { PreferencesCheckGuard } from './preferences-check.guard';
 import { SuperAdminGuard } from './super-admin.guard';
 
 const routes: Routes = [
@@ -33,7 +34,11 @@ const routes: Routes = [
         ]
       }
     ]
-  }
+  },
+  { 
+    path: 'preferences', 
+    canLoad : [PreferencesCheckGuard],
+    loadChildren: () => import('./preferences/preferences.module').then(m => m.PreferencesModule) }
 ];
 
 @NgModule({

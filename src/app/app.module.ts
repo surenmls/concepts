@@ -33,7 +33,7 @@ import { AdminManageComponent } from './admin-manage/admin-manage.component';
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]
