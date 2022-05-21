@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
 import { LoanTypesComponent } from './loan-types/loan-types.component';
@@ -35,7 +35,9 @@ import { AdminManageComponent } from './admin-manage/admin-manage.component';
     FormsModule,
     ReactiveFormsModule,    
   ],
-  providers: [],
+  providers: [
+    {provide : LocationStrategy, useClass:HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

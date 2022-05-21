@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoanTypesComponent implements OnInit {
 
+  isDirty = false;
   constructor() { }
 
   ngOnInit(): void {

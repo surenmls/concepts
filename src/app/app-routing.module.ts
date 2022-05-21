@@ -11,11 +11,13 @@ import { LoanTypesComponent } from './loan-types/loan-types.component';
 import { LoansComponent } from './loans/loans.component';
 import { PreferencesCheckGuard } from './preferences-check.guard';
 import { SuperAdminGuard } from './super-admin.guard';
+import { UnsavedGuard } from './unsaved.guard';
 
 const routes: Routes = [
-  {path: "",component:LoansComponent,canActivate:[AuthGuard]},
+  {path: "", redirectTo: "loans", pathMatch: 'full'},
+  {path: "loans",component:LoansComponent,canActivate:[AuthGuard]},
   {path: "add", component:AddLoansComponent,outlet:"addLoan"},
-  {path: "loan-types", component:LoanTypesComponent},
+  {path: "loan-types", component:LoanTypesComponent,canDeactivate:[UnsavedGuard]},
   {
     path : 'admin',    
     canActivate : [SuperAdminGuard],
